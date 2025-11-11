@@ -1,7 +1,6 @@
 # X-GUI-BLOOKET-CLIENT
 
-# 🧰 Cheats List
-
+ 🧰 Cheats List
  🎯 Global Cheats
 Auto Answer
 Change Blook Ingame
