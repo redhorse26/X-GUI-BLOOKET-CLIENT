@@ -24,7 +24,7 @@ Remove All Taken Blooks
 Bypass Join Limit
 
 
- 🧟 Monster Brawl
+🧟 Monster Brawl
 Double Enemy XP
 Half Enemy Speed
 Instant Kill
@@ -39,7 +39,7 @@ Set XP
 Set Level
 
 
- ☕ Cafe
+☕ Cafe
 Max Items
 Remove Customers
 Reset Abilities
@@ -49,7 +49,7 @@ Attack Player
 Spam Attack Player
 
 
- 🪙 Crypto Hack
+🪙 Crypto Hack
 Always Triple
 Always Hack
 Auto Guess
@@ -65,7 +65,7 @@ Flood Alert Box
 Set Host Screen Green
 
 
- 🦖 Deceptive Dinos
+🦖 Deceptive Dinos
 Auto Choose
 Rock ESP
 Set Fossils
@@ -73,7 +73,7 @@ Set Multiplier
 Stop Cheating
 
 
- 🗼 Tower of Doom
+🗼 Tower of Doom
 Fill Deck
 Max Cards
 Max Health
@@ -82,7 +82,7 @@ Min Enemy
 Set Coins
 
 
- 🏭 Factory
+🏭 Factory
 Choose Blook
 Free Upgrades
 Max Blooks
@@ -92,7 +92,7 @@ Set All Mega Bot
 Set Cash
 
 
- 🎣 Fishing Frenzy
+🎣 Fishing Frenzy
 Frenzy
 Client Side Frenzy
 Remove Distraction
@@ -101,7 +101,7 @@ Set Lure
 Set Weight
 
 
- 🐦 Flappy Blook
+🐦 Flappy Blook
 Set Score
 Toggle Ghost
 Change Game Code
