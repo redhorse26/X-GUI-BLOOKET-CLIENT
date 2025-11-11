@@ -2,9 +2,9 @@
 
 ## Setup And Usage Instructions ⚙️
 ## OPTION 1; USERSCRIPT
-1.Install a Userscript Manager
-2.Copy The Code From The USER.JS File and Import It Into Your Manager
-2.You Can Also Install It Via GreasyFork [HERE](https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket)
+1. Install a Userscript Manager
+2. Copy The Code From The USER.JS File and Import It Into Your Manager
+3. You Can Also Install It Via GreasyFork [HERE](https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket)
 ## OPTION 2; BROWSER CONSOLE
 1. Right-Click The Page And Select "INSPECT"
 2. Paste The Code From The .JS File
