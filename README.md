@@ -6,13 +6,20 @@
 
 ## OPTION 1; USERSCRIPT
 1. Install a Userscript Manager
-2. Copy The Code From The USER.JS File and Import It Into Your Manager
+2. Copy The Code From The X-GUI.USER.JS File and Import It Into Your Manager
 3. You Can Also Install It Via GreasyFork [HERE](https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket)
+4. MAKE SURE YOU HAVE DEV MODE ENABLED IN EXTENSION SETTINGS
 ## OPTION 2; BROWSER CONSOLE
 1. Right-Click The Page And Select "INSPECT"
-2. Paste The Code From The .JS File
+2. Paste The Code From The X-GUI.JS File
 3. Voila!
-   
+## OPTION 3; BOOKMARKLET
+1. Right Click Your Bookmarks Bar And Select "Add Page"
+2. Copy The Code From X-GUI.MIN.JS And Paste It Into The URL Bar
+3. Name The Bookmark Whatever You Want
+4. Click The Bookmark When On Blooket
+5. There You Go!
+
 ## CREDITS 📜
 This GUI Was Created By 05Konz And Is Maintained And Updated By Xullys.
 
