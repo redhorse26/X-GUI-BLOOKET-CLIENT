@@ -1,170 +1,208 @@
-# X-GUI-BLOOKET-CLIENT
+# 🚀 X-GUI Blooket Client
 
-# THE MOST ADVANCED, UNBANNABLE BLOOKET GUI, NOT PATCHED AND MAINTAINED!
-# VISIT THE WEBSITE: [X-GUI](https://xull-xxx.github.io)
+[![Website](https://img.shields.io/badge/Website-X--GUI-blue)](https://xull-xxx.github.io)  
+[![Stars](https://img.shields.io/github/stars/yourusername/X-GUI-BLOOKET-CLIENT?style=social)]()  
+[![License](https://img.shields.io/badge/License-MIT-green)]()
 
-## Setup And Usage Instructions ⚙️
+**The most advanced, unbannable Blooket GUI – actively maintained and not patched!**
 
-## OPTION 1; USERSCRIPT
-1. Install a Userscript Manager
-2. Copy The Code From The X-GUI.USER.JS File and Import It Into Your Manager
-3. You Can Also Install It Via GreasyFork [HERE](https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket)
-4. MAKE SURE YOU HAVE DEV MODE ENABLED IN EXTENSION SETTINGS
-## OPTION 2; BROWSER CONSOLE
-1. Right-Click The Page And Select "INSPECT"
-2. Paste The Code From The X-GUI.JS File
-3. Navigate To "Console"
-4. Voila!
-## OPTION 3; BOOKMARKLET
-1. Right Click Your Bookmarks Bar And Select "Add Page"
-2. Copy The Code From X-GUI.MIN.JS And Paste It Into The URL Bar
-3. Name The Bookmark Whatever You Want
-4. Click The Bookmark When On Blooket
-5. There You Go!
+---
 
-## CREDITS 📜
-This GUI Was Created By 05Konz And Is Maintained And Updated By Xullys.
+## ⚙️ Setup & Usage
 
-## DISCLAIMER ❗
-I AM NOT RESPONSIBLE FOR ANY ACTION TAKEN AGAINST YOU / YOUR BLOOKET ACCOUNT.
-PLEASE USE RESPONIBLY!!!
+<details>
+<summary>📜 Option 1: Userscript</summary>
 
-## ⭐ PLEASE STAR THE REPO ⭐
+1. Install a **Userscript Manager** (Tampermonkey, Violentmonkey, etc.)  
+2. Copy the code from `X-GUI.USER.JS` and import it into your manager  
+3. Or install via GreasyFork [**here**](https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket)  
+4. Make sure **Developer Mode** is enabled in your extension settings
+</details>
+
+<details>
+<summary>💻 Option 2: Browser Console</summary>
+
+1. Right-click the page → Select **Inspect**  
+2. Navigate to the **Console** tab  
+3. Paste the code from `X-GUI.JS`  
+4. Press **Enter** → Enjoy!
+</details>
+
+<details>
+<summary>🔖 Option 3: Bookmarklet</summary>
+
+1. Right-click your bookmarks bar → **Add Page**  
+2. Paste the code from `X-GUI.MIN.JS` into the URL field  
+3. Give it a name (e.g., “X-GUI”)  
+4. Click the bookmark whenever you're on Blooket → Voila!
+</details>
+
+---
+
+## 📜 Credits
+- **GUI Created By:** 05Konz  
+- **Maintained & Updated By:** Xullys
+
+---
+
+## ❗ Disclaimer
+I am **not responsible** for any action taken against you or your Blooket account.  
+**Please use responsibly!**
+
+---
+
+## ⭐ Star the Repo
+If you enjoy X-GUI, please give it a **star**! 🌟
+
+---
 
 ## 🧰 Cheats List
 
-### 🎯 Global Cheats
+<details>
+<summary>🎯 Global Cheats</summary>
 
-* Auto Answer
-* Change Blook Ingame
-* Every Answer Correct
-* Get Daily Rewards
-* Highlight Answers
-* Host Any Gamemode
-* Remove Name Limit
-* Remove Random Name
-* Sell Cheap Duplicates
-* Sell Duplicate Blooks
-* Simulate Pack
-* Simulate Unlock
-* Spam Buy Blooks
-* Subtle Highlight Answers
-* Use Any Blook
-* Use Any Banner
-* Remove All Taken Blooks
-* Bypass Name Filter
-* Blooket Bot
-* Free Player Slots
-* Freeze Leaderboard
+| Cheat | Cheat |
+|-------|-------|
+| Auto Answer | Change Blook Ingame |
+| Every Answer Correct | Get Daily Rewards |
+| Highlight Answers | Host Any Gamemode |
+| Remove Name Limit | Remove Random Name |
+| Sell Cheap Duplicates | Sell Duplicate Blooks |
+| Simulate Pack | Simulate Unlock |
+| Spam Buy Blooks | Subtle Highlight Answers |
+| Use Any Blook | Use Any Banner |
+| Remove All Taken Blooks | Bypass Name Filter |
+| Blooket Bot | Free Player Slots |
+| Freeze Leaderboard | |
+</details>
 
-### 💰 GOLD QUEST 
-- **Always Triple**
-- **Always Quintuple**
-- **Auto Choose**
-- **Chest ESP**
-- **Remove Bad Choices**
-- **Flood Alert Box**
-- **Reset Players Gold**
-- **Set Gold**
-- **Set Player's Gold**
-- **Reset All Players' Gold**
-- **Send Ad Text**
-- **Crash Host (Gold)**
+<details>
+<summary>💰 Gold Quest</summary>
+
+- **Always Triple**  
+- **Always Quintuple**  
+- **Auto Choose**  
+- **Chest ESP**  
+- **Remove Bad Choices**  
+- **Flood Alert Box**  
+- **Reset Players Gold**  
+- **Set Gold**  
+- **Set Player's Gold**  
+- **Reset All Players' Gold**  
+- **Send Ad Text**  
+- **Crash Host (Gold)**  
 - **Swap Gold**
+</details>
 
+<details>
+<summary>🧟 Monster Brawl</summary>
 
-### 🧟 Monster Brawl
+- Double Enemy XP  
+- Half Enemy Speed  
+- Instant Kill  
+- Invincibility  
+- Kill Enemies  
+- Magnet  
+- Max Current Abilities  
+- Next Level  
+- Remove Obstacles  
+- Reset Health  
+- Set XP  
+- Set Level  
+</details>
 
-* Double Enemy XP
-* Half Enemy Speed
-* Instant Kill
-* Invincibility
-* Kill Enemies
-* Magnet
-* Max Current Abilities
-* Next Level
-* Remove Obstacles
-* Reset Health
-* Set XP
-* Set Level
+<details>
+<summary>☕ Cafe</summary>
 
-### ☕ Cafe
+- Max Items  
+- Remove Customers  
+- Reset Abilities  
+- Set Cash  
+- Stock Food  
+- Attack Player  
+- Spam Attack Player  
+</details>
 
-* Max Items
-* Remove Customers
-* Reset Abilities
-* Set Cash
-* Stock Food
-* Attack Player
-* Spam Attack Player
+<details>
+<summary>🪙 Crypto Hack</summary>
 
-### 🪙 Crypto Hack
+- Always Triple  
+- Always Quintuple  
+- Always Hack  
+- Auto Guess  
+- Choice ESP  
+- Password ESP  
+- Remove Hack  
+- Set Crypto  
+- Set Password  
+- Crash Password  
+- Steal Players Crypto  
+- Password Spy Panel  
+- Freeze Password  
+- Set Host Screen Green  
+- Crash Host (Crypto)  
+- Flood Alert Box  
+</details>
 
-* Always Triple
-* Always Quintuple
-* Always Hack
-* Auto Guess
-* Choice ESP
-* Password ESP
-* Remove Hack
-* Set Crypto
-* Set Password
-* Crash Password
-* Steal Players Crypto
-* Password Spy Panel
-* Crash Password
-* Freeze Password
-* Set Host Screen Green
-* Crash Host (Crypto)
-* Flood Alert Box
+<details>
+<summary>🦖 Deceptive Dinos</summary>
 
-### 🦖 Deceptive Dinos
+- Auto Choose  
+- Rock ESP  
+- Set Fossils  
+- Set Multiplier  
+- Stop Cheating  
+</details>
 
-* Auto Choose
-* Rock ESP
-* Set Fossils
-* Set Multiplier
-* Stop Cheating
+<details>
+<summary>🗼 Tower of Doom</summary>
 
-### 🗼 Tower of Doom
+- Fill Deck  
+- Max Cards  
+- Max Health  
+- Max Stats  
+- Min Enemy  
+- Set Coins  
+</details>
 
-* Fill Deck
-* Max Cards
-* Max Health
-* Max Stats
-* Min Enemy
-* Set Coins
+<details>
+<summary>🏭 Factory</summary>
 
-### 🏭 Factory
+- Choose Blook  
+- Free Upgrades  
+- Max Blooks  
+- Remove Glitches  
+- Send Glitch  
+- Set All Mega Bot  
+- Set Cash  
+</details>
 
-* Choose Blook
-* Free Upgrades
-* Max Blooks
-* Remove Glitches
-* Send Glitch
-* Set All Mega Bot
-* Set Cash
+<details>
+<summary>🎣 Fishing Frenzy</summary>
 
-### 🎣 Fishing Frenzy
+- Frenzy  
+- Client Side Frenzy  
+- Remove Distraction  
+- Send Distraction  
+- Set Lure  
+- Set Weight  
+</details>
 
-* Frenzy
-* Client Side Frenzy
-* Remove Distraction
-* Send Distraction
-* Set Lure
-* Set Weight
+<details>
+<summary>🐦 Flappy Blook</summary>
 
-### 🐦 Flappy Blook
+- Set Score  
+- Toggle Ghost  
+- Change Game Code  
+</details>
 
-* Set Score
-* Toggle Ghost
-* Change Game Code
+<details>
+<summary>✨ Extras</summary>
 
-### ✨ EXTRAS
-
-* Invert Colors
-* Set Dark Mode
-* Tab Cloaker
-* Autoclicker
-* Small Font
-* 3D Page
+- Invert Colors  
+- Set Dark Mode  
+- Tab Cloaker  
+- Autoclicker  
+- Small Font  
+- 3D Page  
+</details>
