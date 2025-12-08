@@ -1,4 +1,4 @@
-    /**
+ /**
  * @license AGPL-3.0
  * Blooket Cheats
  * Copyright (C) 2023-present 05Konz/Xullys
@@ -154,7 +154,7 @@
     const timeProcessed = 1747005941679;
     let latestProcess = -1;
     const cheat = (async () => {
-        const versionName = "6.10x";
+        const versionName = "6.20x";
         const gui = document.createElement("div");
         Object.assign(gui.style, {
             top: window.innerHeight / 2 - 250 + "px",
@@ -209,6 +209,7 @@
         const classes = {},
             datasets = {};
         styles.innerHTML =
+
             "@import url('https://fonts.googleapis.com/css?family=Titan+One');\n@import url('https://fonts.googleapis.com/css?family=Nunito');" +
             `.bigTextContainer,.version{align-items:center;user-select:none}.cheatsList>div,.settingsPage>div{padding:5px 10px}.gamemode,.gui,.leaderboardList,.sidebar{box-sizing:border-box}.controls>div,.credit,.pathText,.runCheat,.sidebarPath,.version{user-select:none}.noScroll::-webkit-scrollbar{display:none}.noScroll{-ms-overflow-style:none;scrollbar-width:none}.gui {
   position: fixed;
@@ -255,6 +256,15 @@
     box-shadow: 0 0 10px var(--highlight);
   }
 }
+button,
+.runCheat,
+.cheatToggle,
+.toggleTrigger,
+.controls > div,
+.searchbarButton {
+    border-radius: 12px !important;
+}
+
 .controls,.credit,.gamemodesList,.guiContent,.guiTopBar,.sidebar,.sidebarShadow,.version{position:absolute}.sidebarShadow{inset:0;background:#000;opacity:0%;pointer-events:none;transition:.2s;z-index:9}.controls>div,.guiContent,.sidebar,select[data-type] option{background:var(--background2)}.sidebarShadow:has(~ .sidebar:hover){opacity:40%}.credit{bottom:0;left:0;right:0;height:0;transition:.1s;overflow:hidden;text-align:center}.sidebar{top:0;left:0;height:100%;width:50px;transition:.2s 0.1s;z-index:10;overflow-x:hidden;overflow-y:hidden;padding-bottom:30px}
 .sidebar:hover{width:200px;transition-delay:0s}.sidebar:hover>.credit{height:25px;transition:.4s 0.2s}.guiContent{inset:20px;left:70px;top:40px;z-index:1;padding-top:32px}.guiTopBar{z-index:1;top:0;left:50px;right:0;height:25px}.version{top:0;left:0;margin-inline:10px;color:#888;font-size:.9em;letter-spacing:.5px;height:100%;display:flex}.controls{top:0;right:0;display:grid;grid-template-columns:1fr 1fr 1fr;height:25px;width:122px;gap:1px;border:1px solid var(--background);z-index:2}.controls>div{display:grid;place-items:center;font-weight:100}.closeControl{transition:.1s}.closeControl:hover{background:red}.creditsPage,.gamemodesPage,.searchPage{position:absolute;inset:0;top:32px}.gamemodesList{display:grid;gap:0 30px;padding-inline:30px;margin-top:0;padding-top:15px;margin-bottom:0;grid-template-columns:1fr 1fr;overflow-y:scroll;inset:0}.leaderboardPage,.logsPage{inset:10px;position:absolute}.pathText{position:absolute;top:40px;left:70px;right:20px;z-index:3;padding:7px 10px;height:22px}.clearLogsButton,.refreshControl{z-index:5;place-items:center;cursor:pointer}.leaderboardPage{top:42px}.leaderboardList{list-style:none;margin:0;padding:20px 40px 10px;height:100%;overflow:scroll;font-size:1.5em}.logsPage{top:37px;background:#000d;border-radius:2.5px}.logMessages{list-style:none;margin:10px;padding:0;display:flex;flex-direction:column-reverse;overflow-y:scroll;word-wrap:break-word;position:absolute;inset:0}.clearLogsButton{position:absolute;top:5px;right:5px;width:25px;height:25px;display:grid;scale:-1 1 1;transition:.2s}.searchbarHolder{display:flex;outline:2px solid var(--highlight);margin:10px 20px;height:30px;font-size:2em}.searchbarInput{outline:0;border:none;background:0 0;color:#fff;flex:1;font-size:.5em;font-family:Nunito;padding-inline:5px}.gamemode,.settingsPage>div{border-radius:2.5px;background:var(--background)}.searchbarButton{color:#fff;font-size:.6em;aspect-ratio:1/1;height:30px;display:grid;place-items:center;cursor:pointer}.bigText,.bigTextContainer{height:50px;width:200px;font-family:Titan One}.searchResults{position:absolute;inset:0;top:45px;padding-inline:20px;overflow-y:scroll}.favoritesPage,.settingsPage{inset:0;top:32px;overflow-y:scroll;position:absolute}.noResult{margin:20px 10px;font-size:.85em}.clearLogsButton:hover,.licenseMessage{font-size:1.25em}.favoritesPage{padding-block:10px;padding-inline:20px}.licenseMessage{font-weight:900;padding-inline:20px;margin-top:10px}.copyrightTag{font-size:.7em;font-weight:200;position:absolute;bottom:0;left:0;padding:5px 8px}.codingCredits,.creditLinks,.uploadDates{list-style:none;padding-inline:20px;margin-block:16px}.settingsPage{padding:10px;display:flex;flex-direction:column;gap:10px}.sidebarPaths{display:flex;flex-direction:column;width:200px}.bigTextContainer{display:flex;font-size:2em;margin-block:10px;transition:font-size .2s .1s,margin-block .2s .1s}.bigText{display:flex;align-items:center;justify-content:center}.refreshControl{position:absolute;top:45px;right:25px;width:25px;height:25px;display:grid}.gamemode{width:100%;height:200px;margin-bottom:30px;cursor:pointer;display:flex;justify-content:center;align-items:center;padding-top:10px;position:relative;overflow:hidden;padding-bottom:35px;transition:.4s}.contentPage,.gamemode>div{position:absolute;bottom:0}.gamemode:hover{box-shadow:0 0 10px var(--highlight);transition:.2s}.gamemode>img{width:85%;max-width:100%;max-height:100%}.gamemode>div{left:0;right:0;height:25px;background:var(--highlight);display:flex;justify-content:center;align-items:center;box-shadow:0 -5px 5px #0004;font-weight:800;font-size:1.1em;transition:.25s}.contentPage{inset-inline:0;top:35px}.cheatsList{display:flex;flex-direction:column;height:100%;overflow-y:scroll;padding-inline:10px}.cheatToggle,.cheatToggle>.toggleTrigger,.runCheat{height:35px;border-radius:2.5px}.cheatsList>div{display:grid;margin-bottom:10px;position:relative;background:var(--background);border-radius:2.5px}.cheatInfo,.cheatInputs,.cheatName,.cheatTop,.logMessage>span,.runCheat,.sidebarPath,.sidebarPath>i{display:flex}.cheatInfo{flex-direction:column;flex:1}.cheatName{font-size:1.5em;font-weight:700}.cheatDescription{font-size:.8em;margin-right:25px}.runCheat{--buttonColor:var(--highlight);width:20%;background:var(--buttonColor);margin-block:auto;cursor:pointer;align-items:center;justify-content:center;font-weight:800;transition:.5s;color:#fff!important}.runCheat:hover{box-shadow:0 0 10px 0 var(--buttonColor);transition:.3s}.runCheat:active{box-shadow:0 0 0 0 var(--buttonColor);transition:50ms}.cheatInputs{margin:5px 0 5px 5px;flex-direction:column;gap:5px}.searchResult,.standing{margin-bottom:10px;transition:.2s}.creditsPage>ul>li>strong,.logMessage img,.standingBlook{margin-right:5px}.cheatInputs>div{display:flex;flex-direction:row;font-size:.8rem;color:var(--highlight);font-weight:700;align-items:center}.cheatInputs>div>span{flex:1}.cheatToggle{width:20%;background:var(--highlight2);margin-block:auto;cursor:pointer;position:relative}.cheatToggle>.toggleTrigger{width:45px;position:absolute;top:0;left:0;background:var(--highlight);pointer-events:none;transition:left .2s,box-shadow .5s;z-index:1}.cheatToggle:hover>.toggleTrigger{box-shadow:0 0 10px 0 var(--highlight);transition:left .2s,box-shadow .2s}.toggleTrigger.active{left:calc(100% - 45px)}.toggleColor{position:absolute;inset:10px 20px;background:rgb(from var(--toggleOff) r g b / 25%);border-radius:2.5px;transition:.2s}.toggleTrigger.active+.toggleColor{background:rgb(from var(--toggleOn) r g b / 25%)}input[data-type],select[data-type]{width:20%;height:25px;outline:0;border:2px solid var(--highlight);box-sizing:border-box;background:0 0;color:#fff;font-size:.9em;padding-left:5px;font-family:Nunito;border-radius:2px;font-weight:800}.logo,.sidebarPath>i{width:50px;height:50px}select[data-type]{-webkit-appearance:none;-moz-appearance:none;text-indent:1px;text-overflow:''}input::placeholder{color:rgb(from var(--textColor) r g b / 50%)}input[data-type]::-webkit-inner-spin-button,input[data-type]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input[data-type][type=number]{-moz-appearance:textfield}select[data-type] option{border-radius:0}select[data-type]::-ms-expand{display:none}.sidebarPath{align-items:center;cursor:pointer;transition:.2s 0.1s}.searchResult:hover,.sidebarPath:hover{color:var(--highlight);text-shadow:0 0 5px var(--highlight)}.sidebarPath>i{justify-content:center;align-items:center;font-size:1.5em}.sidebarPath>span{padding-left:5px}.sidebar:hover .sidebarPath{padding-left:20px;transition-delay:0s}.logo{left:0;transition:left .2s .1s;display:grid;place-items:center;min-width:50px;position:absolute}.sidebar:hover .logo{left:28px;transition:left .2s}.bigText{margin-top:-150px;transition:margin-top .1s}.sidebar:hover .bigText{margin-top:0;transition:margin-top .4s 0.1s}.sidebar:hover .bigTextContainer{font-size:2.5em;margin-block:20px;transition:font-size .2s,margin-block .2s}/* === Glowing title effect === */
 .bigText {
@@ -272,7 +282,22 @@
 
         gui.className = classes.gui;
 
+
         gui.append(styles);
+        function roundGamemodeBoxes() {
+    // Select only the gamemode tiles via the obfuscated class name
+    const gamemodes = gui.querySelectorAll("." + classes.gamemode);
+
+    gamemodes.forEach(tile => {
+        tile.style.borderRadius = "15px";     // clean rounded edges
+        tile.style.overflow = "hidden";       // keeps images clipped cleanly
+    });
+}
+
+// delay ensures elements exist
+setTimeout(roundGamemodeBoxes, 50);
+
+
         const sidebarShadow = document.createElement("div");
         sidebarShadow.className = classes.sidebarShadow;
 
@@ -280,7 +305,7 @@
         const credit = document.createElement("div");
         credit.className = classes.credit;
 
-        credit.innerText = "Created by 05Konz,Edited";
+
         const sidebar = document.createElement("div");
         sidebar.className = classes.sidebar;
 
@@ -297,81 +322,276 @@
         guiTopBar.append(version);
 
         const controls = document.createElement("div");
-        controls.className = classes.controls;
+controls.className = classes.controls;
 
-        const moveControl = document.createElement("div");
-        moveControl.style.cursor = "grab";
+// Move Control (<-->)
+const moveControl = document.createElement("div");
+moveControl.style.cursor = "grab";
+moveControl.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+  <path d="M4 12l4-4v3h8V8l4 4-4 4v-3H8v3z"/>
+</svg>`;
 
-        moveControl.innerHTML = '<i class="fas fa-arrows-alt-h" style="line-height: 1"></i>';
-        const minimizeControl = document.createElement("div");
+// Minimize Control (-)
+const minimizeControl = document.createElement("div");
+let hideAnimation = false;
+minimizeControl.minimized = false;
+const minimizeSVG = `
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+  <rect x="4" y="11" width="16" height="2"/>
+</svg>`;
 
-        minimizeControl.innerHTML = '<i class="fas fa-compress" style="line-height: 1"></i>';
-        let hideAnimation = false;
-        minimizeControl.onclick = () => {
-            if (hideAnimation == (hideAnimation = true)) return;
-            const hidden = minimizeControl.minimized;
-            if (hidden) {
-                minimizeControl.innerHTML = '<i class="fas fa-compress" style="line-height: 1"></i>';
-                gui.animate(
-                    [
-                        {
-                            width: "122px",
-                            height: "27px",
-                            left: gui.style.left,
-                        },
-                        {
-                            width: "800px",
-                            height: "500px",
-                            left: `${parseInt(gui.style.left) + (hidden ? -678 : 678)}px`,
-                        },
-                    ],
-                    { duration: 200, easing: "ease" }
-                );
-                gui.style.width = "800px";
-                gui.style.height = "500px";
-            } else {
-                minimizeControl.innerHTML = '<i class="fas fa-expand" style="line-height: 1"></i>';
-                gui.animate(
-                    [
-                        {
-                            width: "800px",
-                            height: "500px",
-                            left: gui.style.left,
-                        },
-                        {
-                            width: "122px",
-                            height: "27px",
-                            left: `${parseInt(gui.style.left) + (hidden ? -678 : 678)}px`,
-                        },
-                    ],
-                    { duration: 200, easing: "ease" }
-                );
-                gui.style.width = "122px";
-                gui.style.height = "27px";
+// Fullscreen Control (4 edges)
+const fullscreenSVG = `
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+  <path d="M4 4h6v2H6v4H4V4zm10 0h6v6h-2V6h-4V4zm6 10v6h-6v-2h4v-4h2zm-16 6h6v-2H6v-4H4v6z"/>
+</svg>`;
+
+minimizeControl.innerHTML = minimizeSVG;
+
+minimizeControl.onclick = () => {
+    if (hideAnimation == (hideAnimation = true)) return;
+    const hidden = minimizeControl.minimized;
+
+    if (hidden) {
+        minimizeControl.innerHTML = minimizeSVG;
+        gui.animate(
+            [
+                { width: "122px", height: "27px", left: gui.style.left },
+                { width: "800px", height: "500px", left: `${parseInt(gui.style.left) - 678}px` },
+            ],
+            { duration: 200, easing: "ease" }
+        );
+        gui.style.width = "800px";
+        gui.style.height = "500px";
+    } else {
+        minimizeControl.innerHTML = fullscreenSVG;
+        gui.animate(
+            [
+                { width: "800px", height: "500px", left: gui.style.left },
+                { width: "122px", height: "27px", left: `${parseInt(gui.style.left) + 678}px` },
+            ],
+            { duration: 200, easing: "ease" }
+        );
+        gui.style.width = "122px";
+        gui.style.height = "27px";
+    }
+
+    setTimeout(() => {
+        for (let child of [...gui.children]) {
+            if (child === controls) continue;
+            if (hidden) child.style.display = child.style._display;
+            else {
+                child.style._display = child.style.display;
+                child.style.display = "none";
             }
-            setTimeout(
-                () => {
-                    for (let child of [...gui.children]) {
-                        if (child == controls) continue;
-                        if (hidden) child.style.display = child.style._display;
-                        else {
-                            child.style._display = child.style.display;
-                            child.style.display = "none";
-                        }
-                    }
-                    hideAnimation = false;
-                },
-                hidden ? 200 : 0
-            );
-            gui.style.left = `${parseInt(gui.style.left) + (hidden ? -678 : 678)}px`;
-            minimizeControl.minimized = !hidden;
-        };
-        const closeControl = document.createElement("div");
-        closeControl.className = classes.closeControl;
-        closeControl.innerHTML = '<i class="fas fa-times" style="line-height: 1"></i>';
-        closeControl.onclick = () => gui.remove();
-        controls.append(moveControl, minimizeControl, closeControl);
-        dragElement(moveControl, gui);
+        }
+        hideAnimation = false;
+    }, hidden ? 200 : 0);
+
+    gui.style.left = `${parseInt(gui.style.left) + (hidden ? -678 : 678)}px`;
+    minimizeControl.minimized = !hidden;
+};
+
+// Close Control (X)
+const closeControl = document.createElement("div");
+closeControl.className = classes.closeControl;
+closeControl.innerHTML = `
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+  <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2"/>
+  <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2"/>
+</svg>`;
+closeControl.onclick = () => gui.remove();
+
+controls.append(moveControl, minimizeControl, closeControl);
+        /* === X-GUI: FOOLPROOF PERSIST & RESTORE (v3) ===
+   Paste THIS BLOCK IMMEDIATELY BEFORE:
+       dragElement(moveControl, gui);
+   It restores position AND minimized state (choice C), clamps to viewport,
+   and saves after drag/minimize — without changing your existing logic.
+*/
+(function() {
+  try {
+    const COOKIE = "xgui_state_v3";
+    const COOKIE_OPTS = "; path=/; domain=.blooket.com; expires=Tue, 19 Jan 2038 03:14:07 GMT";
+    const SHIFT_ON_MINIMIZE = 678; // matches your minimize math: gui.style.left += 678
+
+    // --- cookie helpers ---
+    function setCookie(obj) {
+      try { document.cookie = COOKIE + "=" + encodeURIComponent(JSON.stringify(obj)) + COOKIE_OPTS; } catch {}
+    }
+    function getCookie() {
+      try {
+        const m = document.cookie.match(new RegExp('(?:^|; )' + COOKIE + '=([^;]*)'));
+        return m ? JSON.parse(decodeURIComponent(m[1])) : null;
+      } catch { return null; }
+    }
+
+    // --- numeric helpers ---
+    function toNum(v, fallback = 0) {
+      if (typeof v === "number" && isFinite(v)) return Math.round(v);
+      if (typeof v === "string") {
+        const n = parseInt(v);
+        return Number.isFinite(n) ? n : fallback;
+      }
+      return fallback;
+    }
+    function clamp(n, a, b) { return Math.min(Math.max(n, a), b); }
+
+    // --- compute and set canonical (non-minimized) position to save/restore ---
+    function saveStateDebounced(delay = 100) {
+      clearTimeout(saveStateDebounced._t);
+      saveStateDebounced._t = setTimeout(saveStateImmediate, delay);
+    }
+    function saveStateImmediate() {
+      try {
+        const rect = gui.getBoundingClientRect();
+        // Determine whether currently minimized per control flag (your code uses minimizeControl.minimized)
+        const isMin = !!(minimizeControl && minimizeControl.minimized);
+        // CanonicalLeft = if minimized: currentLeft - SHIFT_ON_MINIMIZE, else currentLeft
+        const curLeft = toNum(gui.style.left, Math.round(rect.left));
+        const curTop  = toNum(gui.style.top,  Math.round(rect.top));
+        const canonicalLeft = isMin ? curLeft - SHIFT_ON_MINIMIZE : curLeft;
+        setCookie({
+          left: Math.round(canonicalLeft),
+          top: Math.round(curTop),
+          minimized: !!isMin,
+          // store size in case someone changed it later (defensive)
+          width: Math.round(rect.width),
+          height: Math.round(rect.height),
+          ts: Date.now()
+        });
+      } catch (e) { /* ignore */ }
+    }
+
+    // --- clamp gui into viewport with margin ---
+    function clampIntoView() {
+      try {
+        const rect = gui.getBoundingClientRect();
+        const margin = 8;
+        const maxLeft = Math.max(window.innerWidth - rect.width - margin, margin);
+        const maxTop  = Math.max(window.innerHeight - rect.height - margin, margin);
+        let left = toNum(gui.style.left, Math.round(rect.left));
+        let top  = toNum(gui.style.top,  Math.round(rect.top));
+        left = clamp(left, margin, maxLeft);
+        top  = clamp(top,  margin, maxTop);
+        gui.style.left = left + "px";
+        gui.style.top  = top  + "px";
+        return { left, top };
+      } catch (e) { return null; }
+    }
+
+    // --- restore logic (runs immediately, before dragElement init) ---
+    (function restore() {
+      const s = getCookie();
+      if (!s) return;
+
+      // Apply instantly with no transition so drag math initializes from correct baseline
+      try {
+        gui.style.transition = "none";
+        // set canonical left/top first (non-minimized)
+        if (typeof s.left === "number") gui.style.left = s.left + "px";
+        if (typeof s.top  === "number") gui.style.top  = s.top  + "px";
+        // if saved maximized (not minimized), attempt to restore size if user changed it previously
+        if (!s.minimized && typeof s.width === "number" && typeof s.height === "number") {
+          gui.style.width  = s.width + "px";
+          gui.style.height = s.height + "px";
+        }
+
+        // force layout so subsequent dragElement uses these values as the baseline
+        void gui.offsetHeight;
+      } catch (e) {}
+
+      // Delay re-enable of transitions to prevent animation glitches
+      setTimeout(() => { try { gui.style.transition = ""; } catch {} }, 140);
+
+      // AFTER baseline is set, if saved state wants minimized, call the original onclick to run your minimize animation
+      setTimeout(() => {
+        try {
+          const sNow = getCookie(); // re-read (in case something changed during the small delay)
+          if (!sNow) return;
+
+          // If saved minimized = true -> ensure GUI becomes minimized (call your handler if needed)
+          if (sNow.minimized) {
+            if (minimizeControl && !minimizeControl.minimized) {
+              // call original onclick (preserves all your hide/animation logic)
+              try { minimizeControl.onclick && minimizeControl.onclick(); } catch (e) {}
+            }
+          } else {
+            // If cookie says NOT minimized but control is currently minimized, restore
+            if (minimizeControl && minimizeControl.minimized) {
+              try { minimizeControl.onclick && minimizeControl.onclick(); } catch (e) {}
+            }
+          }
+
+          // After minimize/restore completed (animation 200ms in your code), clamp and canonicalize final position
+          setTimeout(() => {
+            // If minimized, your minimize handler shifts left by +SHIFT_ON_MINIMIZE relative to canonical
+            // clamp to viewport and if clamped, save corrected canonical left
+            clampIntoView();
+            // canonicalize & save
+            saveStateImmediate();
+          }, 260);
+        } catch (e) {}
+      }, 30);
+    })();
+
+    // --- Hook into minimize to save canonical position after its animation finishes ---
+    if (minimizeControl) {
+      const orig = minimizeControl.onclick;
+      minimizeControl.onclick = function() {
+        try { orig && orig.apply(this, arguments); } catch(e) { try { orig && orig(arguments); } catch{} }
+        // wait until your minimize animation completes (200ms) then save
+        setTimeout(saveStateImmediate, 260);
+      };
+    }
+
+    // --- Hook into dragging: save at end of drag
+    // Note: we must not replace your dragElement; we only listen for pointer events on moveControl
+    if (moveControl) {
+      // pointerdown -> record; pointerup -> save
+      moveControl.addEventListener("pointerdown", function() {
+        // small guard to ignore stray early pointermoves: set ignoreUntil
+        saveStateDebounced(300); // ensure a save in case pointerdown didn't produce move
+      }, { passive: true });
+
+      // save on pointerup globally (dragElement will release pointer on up)
+      document.addEventListener("pointerup", function() {
+        // Wait one frame so dragElement has finalized gui.style.left/top
+        setTimeout(saveStateDebounced, 0);
+      }, { passive: true });
+      // fallback mouseup
+      document.addEventListener("mouseup", function() { setTimeout(saveStateDebounced, 0); }, { passive: true });
+    }
+
+    // MutationObserver: if your code (or something else) changes style attribute, save it shortly
+    try {
+      const mo = new MutationObserver((recs) => {
+        for (const r of recs) if (r.attributeName === "style") { saveStateDebounced(120); break; }
+      });
+      mo.observe(gui, { attributes: true, attributeFilter: ["style"] });
+    } catch (e) {}
+
+    // On window resize, clamp into view and save (prevents off-screen after resolution change)
+    window.addEventListener("resize", function() {
+      setTimeout(() => {
+        const fixed = clampIntoView();
+        if (fixed) saveStateDebounced(80);
+      }, 40);
+    });
+
+    // Ensure we never persist closed: your closeControl already does gui.remove() — do nothing.
+
+    // Final safe-save on page unload
+    window.addEventListener("beforeunload", saveStateImmediate);
+
+  } catch (err) {
+    console.error("X-GUI persistence (v3) error:", err);
+  }
+})();
+
+dragElement(moveControl, gui);
+
 
         const gamemodesPage = document.createElement("div");
         gamemodesPage.className = classes.gamemodesPage;
@@ -5042,10 +5262,10 @@ const versions = [
   ["Version 4.00x", "BUGS FIXED", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
   ["Version 3.90x", "FIXED A SPELLING ERROR", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
   ["Version 3.80x", "BUGS", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
-  ["Version 3.70x", "BUGS", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
-  ["Version 3.60x", "BUGS", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
-  ["Version 3.50x", "BUGS", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
-  ["Version 3.40x", "BUGS", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
+  ["Version 3.70x", "ATTEMPTED AN UPDATE BUT FAILED :(", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
+  ["Version 3.60x", "DID SOME UI STUFF", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
+  ["Version 3.50x", "FIXED A FEW BUS", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
+  ["Version 3.40x", "NEW CHEATS ADDED", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
   ["Version 3.30x", "FIXED SUBDOMAIN ISSUE", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
   ["Version 3.20x", "ADDED SIMULATE UNLOCK, ALWAYS HACK, HOST ANY GAMEMODE, BYPASS FILTER, CRASH HOST, STEAL ALL PLAYERS GOLD AND BYPASS JOIN LIMIT", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
   ["Version 3.10x", "ADDED 7 NEW CHEATS", "https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket/versions"],
@@ -5097,33 +5317,8 @@ versions.forEach(([ver, desc, link]) => {
     verDesc.style.color = "var(--textColor2)";
     verDesc.innerText = desc;
 
-    const verLink = document.createElement("a");
-    verLink.href = link;
-    verLink.target = "_blank";
-    Object.assign(verLink.style, {
-        display: "inline-block",
-        padding: "8px 18px",
-        borderRadius: "25px",
-        background: "var(--highlight)",
-        color: "#fff",
-        fontWeight: "700",
-        textDecoration: "none",
-        textAlign: "center",
-        marginTop: "8px",
-        width: "fit-content",
-        transition: "background 0.2s ease, transform 0.2s ease"
-    });
-    verLink.innerText = "GET";
-    verLink.onmouseover = () => {
-        verLink.style.background = "#7F5AF0";
-        verLink.style.transform = "translateY(-2px)";
-    };
-    verLink.onmouseleave = () => {
-        verLink.style.background = "var(--highlight)";
-        verLink.style.transform = "translateY(0)";
-    };
 
-    card.append(verTitle, verDesc, verLink);
+    card.append(verTitle, verDesc);
     changelogPage.appendChild(card);
 });
 
@@ -5139,7 +5334,7 @@ guiContent.appendChild(changelogPage);
 
         const licenseMessage = document.createElement("div");
         licenseMessage.className = classes.licenseMessage;
-        licenseMessage.innerHTML = `<i class="fas fa-file-alt" style="line-height: 1;aspect-ratio: 1 / 1;height: 20px;display: inline-grid;place-items: center;"></i> This script is licensed under <a style="color: var(--highlight);" target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0</a>, read more <a style="color: var(--highlight);" target="_blank" href="https://github.com/Blooket-Council/Blooket-Cheats?tab=readme-ov-file#licensing">here</a>.<br>`;
+        licenseMessage.innerHTML = `<i class="fas fa-file-alt" style="line-height: 1;aspect-ratio: 1 / 1;height: 20px;display: inline-grid;place-items: center;"></i> This script is licensed under <a style="color: var(--highlight);" target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL-3.0</a>, read more <a style="color: var(--highlight);" target="_blank" href="https:/.com/Blooket-Council/Blooket-Cheats?tab=readme-ov-file#licensing">here</a>.<br>`;
 
         const copyrightTag = document.createElement("span");
         copyrightTag.className = classes.copyrightTag;
@@ -5149,15 +5344,15 @@ guiContent.appendChild(changelogPage);
         const codingCredits = document.createElement("ul");
         codingCredits.className = classes.codingCredits;
 
-        codingCredits.append(createCredit("GUI Design + Creation", "05Konz"));
-        codingCredits.append(createCredit("Anti-Suspend", "CryptoDude3"));
+        codingCredits.append(createCredit("GUI Design + Creation", "05Konz+XullysFN"));
+        codingCredits.append(createCredit("Anti-Suspend", "CryptoDude3+XullysFN"));
         codingCredits.append(createCredit("Blooket Cheats", 'gliz <i class="fas fa-long-arrow-alt-right"></i> Minesraft2 <i class="fas fa-long-arrow-alt-right"></i> 05Konz <i class="fas fa-long-arrow-alt-right"></i> XullysFN'));
 
         const creditLinks = document.createElement("ul");
         creditLinks.className = classes.creditLinks;
 
-        creditLinks.append(createCredit("OG Repo", '<a target="_blank" href="https://github.com/Blooket-Council/Blooket-Cheats">Blooket-Council/Blooket-Cheats</a>'));
-        creditLinks.append(createCredit("Gitlab", '<a target="_blank" href="https://gitlab.com/blooket/blooket-cheats">blooket/blooket-cheats</a>'));
+        creditLinks.append(createCredit("Our Github", '<a target="_blank" href="https://github.com/XULL-XXX/X-GUI-BLOOKET-CLIENT">X-GUI CHEATS/GITHUB</a>'));
+        creditLinks.append(createCredit("Our Website *BETA*", '<a target="_blank" href="https://XULL-XXX.github.io">More Info/Website</a>'));
         creditLinks.append(createCredit("Greasyfork", '<a target="_blank" href="https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket">Greasyfork page (Give Me Feedback!)</a>'));
 
         function parseTime(d) {
@@ -5175,20 +5370,19 @@ guiContent.appendChild(changelogPage);
         uploadDates.className = classes.uploadDates;
 
         try {
-            let currentDate = new Date(timeProcessed),
-                latestDate = new Date(latestProcess);
-            uploadDates.append(createCredit("Current GUI Upload Date", parseDate(currentDate)));
-            if (latestProcess != -1) uploadDates.append(createCredit("Latest GUI Upload Date", parseDate(latestDate)));
+            let currentDate = new Date(null),
+                latestDate = new Date(null);
+            if (latestProcess != -1) uploadDates.append(createCredit("", parseDate(null)));
             if (currentDate < latestDate) {
-                const warning = document.createElement("span");
+                const warning = document.createElement("");
                 warning.className = classes.warning;
-                warning.innerText = "You are using an outdated version of K-GUI, check out the GitHub / GitLab for a newer version.";
+                warning.innerText = "";
                 uploadDates.append(warning);
             }
         } catch {
-            const warning = document.createElement("span");
+            const warning = document.createElement("");
             warning.className = classes.warning;
-            warning.innerText = "Unable to check update information.";
+            warning.innerText = "";
             uploadDates.append(warning);
         }
 
@@ -5210,6 +5404,46 @@ guiContent.appendChild(changelogPage);
             listItem.append(contributionText, right);
             return listItem;
         }
+        // --- Create Centered, Large Ping Display ---
+const pingDisplay = document.createElement("div");
+pingDisplay.id = "xguiPingDisplay";
+pingDisplay.style.cssText = `
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.4em; /* bigger text */
+    font-weight: 700;
+    color: var(--highlight);
+    font-family: Nunito, sans-serif;
+    width: 100%;
+`;
+
+// Initial text
+pingDisplay.innerText = "Server Ping: Calculating...";
+
+// Append to the bottom of the credits page
+creditsPage.appendChild(pingDisplay);
+
+// Function to ping a server
+function updatePing() {
+    const serverURL = "https://blooket.com"; // replace with desired server
+    const start = performance.now();
+
+    fetch(serverURL, { method: "HEAD", cache: "no-cache" })
+        .then(() => {
+            const latency = Math.round(performance.now() - start);
+            pingDisplay.innerText = `Server Ping: ${latency} ms`;
+        })
+        .catch(() => {
+            pingDisplay.innerText = "Server Ping: Offline";
+        });
+}
+
+// Initial ping
+updatePing();
+
+// Update every 5 seconds
+setInterval(updatePing, 5000);
+
 
         const settingsPage = document.createElement("div");
         settingsPage.className = classes.noScroll + " " + classes.settingsPage;
@@ -5714,7 +5948,7 @@ createSidebarPath("Logs", "terminal", logsPage);
 createSidebarPath("Settings", "cog", settingsPage);
 createSidebarPath("Mobile Mode", "mobile", mobilePage);
 createSidebarPath("Changelog", "changelog", changelogPage);
-createSidebarPath("Credits", "code", creditsPage);
+createSidebarPath("Info/Credits", "code", creditsPage);
 
 
 
