@@ -1,7 +1,7 @@
 # 🚀 X-GUI Blooket Client
 # THANKS FOR TRYING X-GUI!
 
-[![Website](https://img.shields.io/badge/Website-X--GUI-blue)](https://xull-xxx.github.io)  
+[![Website](https://img.shields.io/badge/Website-X--GUI-blue)](https://xgui-client.github.io)  
 [![Stars](https://img.shields.io/github/stars/xull-xxx/X-GUI-BLOOKET-CLIENT?style=social)](https://github.com/xull-xxx/X-GUI-BLOOKET-CLIENT/stargazers)
 [![License](https://img.shields.io/badge/License-AGPL3.0-green)]()
 
