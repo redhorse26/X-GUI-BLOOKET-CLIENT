@@ -1,5 +1,11 @@
 # 🚀 X-GUI Blooket Client
 # THANKS FOR TRYING X-GUI!
+Note From The Author:
+Thanks so much for the support guys!
+I never thought this project would get this much attention and grow so much!
+I'm taking a break for the holidays, enjoy 6.50x!
+I'll be back in january y'all!
+-x-gui
 
 [![Website](https://img.shields.io/badge/Website-X--GUI-blue)](https://xgui-client.github.io)  
 [![Stars](https://img.shields.io/github/stars/xull-xxx/X-GUI-BLOOKET-CLIENT?style=social)](https://github.com/xull-xxx/X-GUI-BLOOKET-CLIENT/stargazers)
