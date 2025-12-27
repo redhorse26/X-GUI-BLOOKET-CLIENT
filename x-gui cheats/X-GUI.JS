@@ -46,7 +46,7 @@ console.log("%c Star the GitHub repo! %c https://github.com/xgui-client/X-GUI-BL
     const timeProcessed = 1747005941679;
     let latestProcess = -1;
     const cheat = (async () => {
-        const versionName = "6.62x";
+        const versionName = "6.63x";
         const gui = document.createElement("div");
         Object.assign(gui.style, {
             top: window.innerHeight / 2 - 250 + "px",
@@ -1480,7 +1480,9 @@ window.addEventListener("beforeunload", saveGUIState);
                         },
                     },
                     {
-                       
+
+
+
                         name: "Free Player Slots",
             description: "Allows more players to join if the game is full",
             run: async () => {
@@ -1642,7 +1644,7 @@ window.addEventListener("beforeunload", saveGUIState);
             }
         }, {
             name: "Account Generator",
-            description: "Generates An Account, Only works on Blooket SignUp Page, Only Works With CORS Disabled",
+            description: "Generates An Account, Only works on Blooket SignUp Page And You Need CORS Disabled",
             run: async function () {
 
 
@@ -2241,7 +2243,6 @@ extras: {
   name: "Extras",
   cheats: [
     {
-       
 
 
         name: "Toggle Invert Colors",
@@ -3139,7 +3140,8 @@ extras: {
     },
   ],
 },
-// === END: extras category ===
+
+
 
             gold: {
                 img: new Date().getMonth() == 9 ? "https://media.blooket.com/image/upload/v1663212881/Media/logos/Candy_Quest_Logo.png" : "https://media.blooket.com/image/upload/v1663212881/Media/logos/Gold_Quest_Logo_Resized.png",
@@ -6394,133 +6396,95 @@ name: "Set Next Fish",
 
         const creditsPage = document.createElement("div");
         creditsPage.className = classes.creditsPage;
-        const mobilePage = document.createElement("div")
-        mobilePage.className = classes.mobilePage;
+        const mobilePage = document.createElement("div");
+mobilePage.className = classes.mobilePage;
 
-        // ====================== CLEAN MOBILE MODE SYSTEM (SLEEK + MINIMAL) ===========================
 (function () {
-
     if (!gui) return;
 
     const MOBILE_KEY = "XGUI_MOBILE_MODE_ENABLED";
+    let enterBtn = null, exitBtn = null;
 
-    let enterBtn = null;
-    let exitBtn = null;
-
-    // ====================== CLEAN MOBILE CSS ======================
+    // ====================== MOBILE CSS ======================
     const mobileCSS = document.createElement("style");
-    mobileCSS.innerHTML = `
-        body.xgui-mobile-mode .X-Gui-sidebar {
-            width: 70px !important;
-            overflow: hidden !important;
-            padding: 18px 0 !important;
-            display: flex !important;
+    mobileCSS.textContent = `
+        body.xgui-mobile-mode .${classes.gui} .sidebar {
+            width: 60px !important;
+            padding: 8px 0 !important;
             flex-direction: column !important;
             align-items: center !important;
             justify-content: flex-start !important;
-            gap: 20px !important;
+            gap: 10px !important;
+            overflow: hidden !important;
             transition: 0.25s ease;
         }
-
-        body.xgui-mobile-mode .X-Gui-sidebar span {
-            display: none !important;
+        body.xgui-mobile-mode .${classes.gui} .sidebar:hover { width: 140px !important; }
+        body.xgui-mobile-mode .${classes.gui} .sidebar span { display: none !important; }
+        body.xgui-mobile-mode .${classes.gui} .sidebar::-webkit-scrollbar { display: none; }
+        body.xgui-mobile-mode .${classes.gui} .guiContent {
+            inset: 10px !important;
+            left: 65px !important;
+            top: 40px !important;
+            padding: 10px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 6px !important;
+            overflow-y: hidden !important;
         }
-
-        body.xgui-mobile-mode .X-Gui-sidebar::-webkit-scrollbar {
-            display: none !important;
+        body.xgui-mobile-mode .${classes.gui} * { font-size: 0.95em !important; line-height: 1.2 !important; }
+        body.xgui-mobile-mode .${classes.gui} input,
+        body.xgui-mobile-mode .${classes.gui} select,
+        body.xgui-mobile-mode .${classes.gui} button { font-size: 1em !important; }
+        body.xgui-mobile-mode .${classes.gui} .bigTextContainer { font-size: 1.8em !important; margin-block: 8px !important; }
+        body.xgui-mobile-mode .${classes.gui} .bigText {
+            text-shadow: 0 0 6px var(--highlight), 0 0 12px var(--highlight2) !important;
         }
-
-        body.xgui-mobile-mode .X-Gui-content {
-            overflow-y: auto !important;
-            max-height: calc(100% - 45px) !important;
-            padding-right: 10px !important;
-            min-width: 0 !important;
-            word-break: break-word !important;
-            transition: 0.25s ease;
-        }
-
-        body.xgui-mobile-mode .setting,
-        body.xgui-mobile-mode .setting-row,
-        body.xgui-mobile-mode .setting > *,
-        body.xgui-mobile-mode .setting-row > * {
-            min-width: 0 !important;
-            max-width: 100% !important;
-            white-space: normal !important;
-            word-break: break-word !important;
-            line-height: 1.3 !important;
-        }
-
-        body.xgui-mobile-mode .setting-row {
-            display: block !important;
-        }
-
-        /* BUTTON STYLE */
+        body.xgui-mobile-mode .${classes.gui} .settingsPage,
+        body.xgui-mobile-mode .${classes.gui} .setting-row { flex-direction: column !important; gap: 4px !important; }
         .xgui-mobile-toggle-btn {
-            margin: 12px;
-            padding: 10px 14px;
+            margin: 6px auto !important;
+            padding: 8px 12px;
             background: #0d99ff;
             color: white;
             font-weight: 700;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
-            width: fit-content;
+            width: 75% !important;
+            max-width: 200px;
+            text-align: center;
+            font-size: 0.9em !important;
             transition: 0.2s ease;
             user-select: none;
         }
-
-        .xgui-mobile-toggle-btn:hover {
-            background: #0c7adc;
-            transform: scale(1.03);
-        }
-
-        .xgui-exit-btn {
-            background: #d33 !important;
-        }
-
-        .xgui-exit-btn:hover {
-            background: #b22 !important;
-        }
+        .xgui-mobile-toggle-btn:hover { background: #0c7adc; transform: scale(1.02); }
+        .xgui-exit-btn { background: #d33 !important; }
+        .xgui-exit-btn:hover { background: #b22 !important; }
     `;
     document.head.appendChild(mobileCSS);
 
-    // ====================== ENTER MOBILE MODE ======================
-    function enableMobile() {
-
-        localStorage.setItem(MOBILE_KEY, "true");
+    // ====================== ENABLE / DISABLE ======================
+    function enableMobile(save = true) {
         gui.dataset.mobileMode = "true";
         document.body.classList.add("xgui-mobile-mode");
+        if (!gui._mobileOrig) gui._mobileOrig = { width: gui.style.width, contentLeft: guiContent.style.left };
+        gui.style.width = "360px";
+        guiContent.style.left = "60px";
 
-        if (!gui._mobileOrig) {
-            gui._mobileOrig = {
-                width: gui.style.width,
-                contentLeft: guiContent.style.left
-            };
-        }
-
-        gui.style.width = "430px";
-        guiContent.style.left = "75px";
-
-        if (bigTextContainer) bigTextContainer.style.display = "none";
-
-        // Remove ENTER button
+        if (bigTextContainer) bigTextContainer.style.display = "flex";
         if (enterBtn) enterBtn.style.display = "none";
 
-        // Create EXIT button
         if (!exitBtn) {
             exitBtn = document.createElement("div");
             exitBtn.innerText = "Exit Mobile Mode";
             exitBtn.className = "xgui-mobile-toggle-btn xgui-exit-btn";
-            exitBtn.onclick = disableMobile;
+            exitBtn.onclick = () => disableMobile(true);
             mobilePage.appendChild(exitBtn);
-        } else {
-            exitBtn.style.display = "block";
-        }
+        } else { exitBtn.style.display = "block"; }
+
+        if (save) localStorage.setItem(MOBILE_KEY, "true");
     }
 
-    // ====================== EXIT MOBILE MODE ======================
-    function disableMobile() {
-
-        localStorage.removeItem(MOBILE_KEY);
+    function disableMobile(save = true) {
         gui.dataset.mobileMode = "false";
         document.body.classList.remove("xgui-mobile-mode");
 
@@ -6530,30 +6494,28 @@ name: "Set Next Fish",
         }
 
         if (bigTextContainer) bigTextContainer.style.display = "";
-
         if (exitBtn) exitBtn.style.display = "none";
+        if (enterBtn) enterBtn.style.display = "block";
 
-        // Show ENTER button
-        if (enterBtn) {
-            enterBtn.style.display = "block";
-        }
+        if (save) localStorage.setItem(MOBILE_KEY, "false");
     }
 
-    // ====================== ADD ENTER BUTTON TO PAGE ======================
+    // ====================== ENTER BUTTON ======================
     if (!enterBtn) {
         enterBtn = document.createElement("div");
         enterBtn.innerText = "Enter Mobile Mode";
         enterBtn.className = "xgui-mobile-toggle-btn";
-        enterBtn.onclick = enableMobile;
+        enterBtn.onclick = () => enableMobile(true);
         mobilePage.appendChild(enterBtn);
     }
 
-    // ====================== AUTO LOAD ======================
-    if (localStorage.getItem(MOBILE_KEY) === "true") {
-        setTimeout(() => enableMobile(), 50);
+    // ====================== AUTO LOAD / AUTOMOBILE ======================
+    const storedValue = localStorage.getItem(MOBILE_KEY);
+
+    if (window.innerWidth <= 480 || storedValue === "true") {
+        setTimeout(() => enableMobile(false), 50); // auto-enable, don't overwrite stored value
     }
 
-    // When user clicks the sidebar tab to open mobile page:
     mobilePage.onPath = function () {
         if (gui.dataset.mobileMode === "true") {
             if (exitBtn) exitBtn.style.display = "block";
@@ -6565,11 +6527,13 @@ name: "Set Next Fish",
     };
 
     gui.toggleMobileMode = function () {
-        if (gui.dataset.mobileMode === "true") disableMobile();
-        else enableMobile();
+        if (gui.dataset.mobileMode === "true") disableMobile(true);
+        else enableMobile(true);
     };
 
 })();
+
+
 
 
 
@@ -6615,6 +6579,7 @@ changelogPage.appendChild(title);
 
 // Versions array (30 versions, highest to lowest)
 const versions = [
+  ["Version 6.63x", "ADDED BLOOK EDITOR AND UPDATED MOBILE MODE", "null"],
   ["Version 6.62x", "ADDED ACCOUNT GENERATOR", "null"],
   ["Version 6.61x", "ADDED BLOOKET STREAM FINDER AND ALT MANAGER", "null"],
   ["Version 6.60x", "fixed ping display! ADDED CONSOLE MESSAGE AND ADDED PIN GUESSER!!", "null"],
@@ -6734,7 +6699,6 @@ altStyle.textContent = `
 .${classes.favoritesPage || "favoritesPage"}::-webkit-scrollbar-track {
   background: transparent;
 }
-
 .altInput {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.15);
@@ -6745,15 +6709,12 @@ altStyle.textContent = `
   outline: none;
   transition: border .2s ease, box-shadow .2s ease, background .2s ease;
 }
-.altInput::placeholder {
-  color: rgba(255,255,255,.45);
-}
+.altInput::placeholder { color: rgba(255,255,255,.45); }
 .altInput:focus {
   border-color: var(--highlight);
   background: rgba(255,255,255,0.08);
   box-shadow: 0 0 0 2px rgb(from var(--highlight) r g b / 35%);
 }
-
 .altBtn {
   padding: 10px;
   border-radius: 14px;
@@ -6774,13 +6735,7 @@ altStyle.textContent = `
   transform: translateY(0);
   box-shadow: 0 4px 14px rgb(from var(--highlight) r g b / 35%);
 }
-
-.altSmallBtn {
-  padding: 6px 10px;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: .8em;
-}
+.altSmallBtn { padding: 6px 10px; border-radius: 10px; font-weight: 700; font-size: .8em; }
 `;
 document.head.appendChild(altStyle);
 
@@ -6808,17 +6763,13 @@ Object.assign(addAltCard.style, {
     background: "var(--background2)",
     boxShadow: "0 5px 20px rgba(0,0,0,0.28)"
 });
-
 addAltCard.innerHTML = `
   <span style="font-weight:800;color:var(--highlight)">Add Alt</span>
-
   <input id="altUser" class="altInput" placeholder="Username">
-
   <div style="display:flex;gap:8px;align-items:center">
     <input id="altPass" class="altInput" type="password" placeholder="Password" style="flex:1">
     <button id="toggleAddPass" class="altBtn altSmallBtn">👁</button>
   </div>
-
   <button id="saveAltBtn" class="altBtn">➕ Save Alt</button>
 `;
 altPage.appendChild(addAltCard);
@@ -6832,16 +6783,30 @@ Object.assign(altList.style, {
 });
 altPage.appendChild(altList);
 
+// ===== Cookie Storage Helpers =====
+function setCookie(name, value, days = 365) {
+    const expires = new Date(Date.now() + days*864e5).toUTCString();
+    const domain = location.hostname.split('.').slice(-2).join('.'); // save on root domain
+    document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; domain=.${domain}; SameSite=Lax`;
+}
+
+function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+}
+
 // ===== Storage =====
 const ALT_KEY = "xgui_alts";
-const getAlts = () => JSON.parse(localStorage.getItem(ALT_KEY) || "[]");
-const setAlts = (alts) => localStorage.setItem(ALT_KEY, JSON.stringify(alts));
+const getAlts = () => {
+    const cookie = getCookie(ALT_KEY);
+    return cookie ? JSON.parse(cookie) : [];
+};
+const setAlts = (alts) => setCookie(ALT_KEY, JSON.stringify(alts));
 
 // ===== Render =====
 function renderAlts() {
     altList.innerHTML = "";
     const alts = getAlts();
-
     if (!alts.length) {
         const empty = document.createElement("div");
         empty.style.opacity = ".6";
@@ -6849,10 +6814,8 @@ function renderAlts() {
         altList.appendChild(empty);
         return;
     }
-
     alts.forEach((alt, index) => {
         let visible = false;
-
         const card = document.createElement("div");
         Object.assign(card.style, {
             display: "flex",
@@ -6864,7 +6827,6 @@ function renderAlts() {
             boxShadow: "0 5px 20px rgba(0,0,0,0.28)",
             transition: "transform .2s ease, box-shadow .2s ease"
         });
-
         card.onmouseover = () => {
             card.style.transform = "translateY(-4px)";
             card.style.boxShadow = "0 10px 30px rgba(0,0,0,0.35)";
@@ -6881,7 +6843,6 @@ function renderAlts() {
         const viewBtn = document.createElement("button");
         viewBtn.className = "altBtn altSmallBtn";
         viewBtn.innerText = "👁 View";
-
         viewBtn.onclick = () => {
             visible = !visible;
             passSpan.innerText = visible ? alt.pass : "••••••••";
@@ -6917,7 +6878,6 @@ const addPassInput = addAltCard.querySelector("#altPass");
 addAltCard.querySelector("#toggleAddPass").onclick = () => {
     addPassInput.type = addPassInput.type === "password" ? "text" : "password";
 };
-
 addAltCard.querySelector("#saveAltBtn").onclick = () => {
     const user = addAltCard.querySelector("#altUser").value.trim();
     const pass = addPassInput.value.trim();
@@ -6936,6 +6896,233 @@ addAltCard.querySelector("#saveAltBtn").onclick = () => {
 
 // Refresh on open
 altPage.onPath = renderAlts;
+
+
+
+        // ===== BLOOK PAGE (X-GUI THEME) =====
+const blookPage = document.createElement("div");
+blookPage.className = "blookPage";
+
+Object.assign(blookPage.style, {
+    display: "flex",
+    flexDirection: "column",
+    gap: "16px",
+    padding: "25px 20px 60px 20px", // increased bottom padding from 50px -> 60px
+    overflowY: "auto",
+    height: "100%",
+    background: "linear-gradient(135deg, #0b1020, #12162e, #1b1240)",
+    boxShadow: "inset 0 0 30px rgba(0,0,0,0.6)",
+    borderRadius: "14px"
+});
+
+// ===== Styles =====
+const blookStyle = document.createElement("style");
+blookStyle.textContent = `
+.blookPage::-webkit-scrollbar {
+  width: 6px;
+}
+.blookPage::-webkit-scrollbar-thumb {
+  background: #5b4bdb;
+  border-radius: 4px;
+}
+.blookPage::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.blookInput {
+  background: rgba(20,25,55,0.65);
+  border: 1px solid rgba(120,100,255,0.25);
+  border-radius: 12px;
+  padding: 8px 10px;
+  color: #fff;
+  font-size: 0.95em;
+  outline: none;
+  width: 70px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.blookInput:focus {
+  border-color: #8f6bff;
+  box-shadow: 0 0 10px rgba(120,100,255,0.7);
+  background: rgba(25,30,65,0.8);
+}
+
+.blookBtn {
+  padding: 11px 24px;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #8f6bff, #5b4bdb);
+  box-shadow: 0 6px 18px rgba(120,100,255,0.35);
+  transition: all 0.15s ease;
+  margin-bottom: 12px; /* added bottom margin for breathing room */
+}
+.blookBtn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 22px rgba(120,100,255,0.45);
+}
+.blookBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(120,100,255,0.3);
+}
+
+.editorContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  background: rgba(18,22,46,0.85);
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(120,100,255,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.finalConfigContainer {
+  margin-top: 18px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 12px; /* added padding to prevent button from being cramped */
+}
+
+.finalConfigInput {
+  background: rgba(20,25,55,0.75);
+  border: 1px solid rgba(120,100,255,0.25);
+  border-radius: 14px;
+  padding: 12px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05em;
+  text-align: center;
+  width: 92%;
+  box-shadow: 0 0 12px rgba(120,100,255,0.25);
+}
+`;
+document.head.appendChild(blookStyle);
+
+
+// ===== Title =====
+const blookTitle = document.createElement("div");
+blookTitle.innerHTML = `
+<div style="
+  font-size:2em;
+  font-weight:900;
+  text-align:center;
+  color:#fff;
+  text-shadow:0 0 6px rgba(120,100,255,0.7);
+">
+🖌️ Blook Editor
+</div>
+<div style="
+  font-size:1em;
+  font-weight:500;
+  color:#cfcfff;
+  text-align:center;
+  margin-top:6px;
+">
+Sets Your Blook To Custom • In-Game Only
+</div>
+`;
+blookPage.appendChild(blookTitle);
+
+// ===== Editor Container =====
+const editorContainer = document.createElement("div");
+editorContainer.className = "editorContainer";
+blookPage.appendChild(editorContainer);
+
+// ===== Inputs =====
+function createBlookInput(label, id) {
+    const div = document.createElement("div");
+    div.style.display = "flex";
+    div.style.flexDirection = "column";
+    div.style.alignItems = "center";
+    div.style.gap = "6px";
+
+    const l = document.createElement("label");
+    l.htmlFor = id;
+    l.textContent = label;
+    l.style.color = "#fff";
+    l.style.fontWeight = "600";
+    l.style.fontSize = "0.9em";
+
+    const input = document.createElement("input");
+    input.type = "number";
+    input.id = id;
+    input.value = 0;
+    input.className = "blookInput";
+
+    div.append(l, input);
+    editorContainer.appendChild(div);
+    return input;
+}
+
+const parts = {
+    base: createBlookInput("Base", "base"),
+    clothing: createBlookInput("Clothing", "clothing"),
+    eyes: createBlookInput("Eyes", "eyes"),
+    glasses: createBlookInput("Glasses", "glasses"),
+    hair: createBlookInput("Hair", "hair"),
+    hairColor: createBlookInput("Hair Color", "hairColor"),
+    hat: createBlookInput("Hat", "hat"),
+    item: createBlookInput("Item", "item"),
+    mouth: createBlookInput("Mouth", "mouth"),
+    nose: createBlookInput("Nose", "nose"),
+    cheeks: createBlookInput("Cheeks", "cheeks"),
+    eyebrows: createBlookInput("Eyebrows", "eyebrows"),
+    eyebrowsColor: createBlookInput("Eyebrows Color", "eyebrowsColor")
+};
+
+// ===== Final Config =====
+const finalConfigContainer = document.createElement("div");
+finalConfigContainer.className = "finalConfigContainer";
+
+const finalConfig = document.createElement("input");
+finalConfig.className = "finalConfigInput";
+finalConfig.placeholder = "Final Configuration String";
+finalConfigContainer.appendChild(finalConfig);
+
+const setBtn = document.createElement("button");
+setBtn.className = "blookBtn";
+setBtn.textContent = "Set Blook";
+setBtn.style.marginTop = "16px";
+finalConfigContainer.appendChild(setBtn);
+
+blookPage.appendChild(finalConfigContainer);
+
+// ===== Logic =====
+function updateConfig() {
+    const values = Object.values(parts).map(i => i.value || 0);
+    finalConfig.value =
+        `${values[0]}#${values[1]}#${values[2]}#${values[3]}#${values[4]}` +
+        `$${values[5]}#${values[6]}#${values[7]}#${values[8]}#${values[9]}` +
+        `#${values[10]}#${values[11]}$${values[12]}`;
+}
+Object.values(parts).forEach(i => i.addEventListener("input", updateConfig));
+updateConfig();
+
+setBtn.onclick = () => {
+    const blook = finalConfig.value;
+    let t = Object.values(function e(t = document.querySelector("body>div")) {
+        return Object.values(t)[1]?.children?.[0]?._owner?.stateNode
+            ? t
+            : e(t.querySelector(":scope>div"));
+    }())[1].children[0]._owner.stateNode;
+
+    if (!t.state.unlocks) t.props.client.blook = blook;
+
+    t.props.liveGameController.setVal({
+        path: `c/${t.props.client.name}/b`,
+        val: blook
+    });
+};
+
+
+
 
 
 
@@ -6967,8 +7154,8 @@ altPage.onPath = renderAlts;
         creditLinks.className = classes.creditLinks;
 
         creditLinks.append(createCredit("Our Github", '<a target="_blank" href="https://github.com/XULL-XXX/X-GUI-BLOOKET-CLIENT">X-GUI CHEATS/GITHUB</a>'));
-        creditLinks.append(createCredit("Our Website *RELEASED*", '<a target="_blank" href="https://xgui-client.github.io">More Info/Website</a>'));
-        creditLinks.append(createCredit("Greasyfork", '<a target="_blank" href="https://greasyfork.org/en/scripts/553301-x-gui-client-for-blooket">Greasyfork page (Give Me Feedback!)</a>'));
+        creditLinks.append(createCredit("Our Website", '<a target="_blank" href="https://xgui-client.github.io">More Info/Website</a>'));
+        creditLinks.append(createCredit("Discord", '<a target="_blank" href="https://discord.gg/Zk5a4QXN">JOIN THE SERVER</a>'));
 
         function parseTime(d) {
             const hour = d.getHours() % 12 == 0 ? 12 : d.getHours() % 12;
@@ -7816,6 +8003,29 @@ function createSidebarPath(name, iconKey, page) {
 
 </svg>
 `,
+      editor: `
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     width="1em" height="1em"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.8"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+  <!-- Box -->
+  <rect x="3" y="3" width="18" height="18" rx="4" ry="4"/>
+
+  <!-- Eyes -->
+  <circle cx="8" cy="10" r="1.2"/>
+  <circle cx="16" cy="10" r="1.2"/>
+
+  <!-- Smile -->
+  <path d="M7 15c1.5 1.5 4.5 1.5 6 0"/>
+</svg>
+`,
+
+
 
 
     terminal: `
@@ -7942,6 +8152,7 @@ createSidebarPath("Logs", "terminal", logsPage);
 createSidebarPath("Settings", "cog", settingsPage);
 createSidebarPath("Mobile Mode", "mobile", mobilePage);
 createSidebarPath("Alt Manager", "alt", altPage);
+createSidebarPath("Blook Editor", "editor", blookPage);
 createSidebarPath("Changelog", "changelog", changelogPage);
 createSidebarPath("Info/Credits", "code", creditsPage);
 
