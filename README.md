@@ -1,5 +1,5 @@
 # 🚀 X-GUI Blooket Client
-# NEW ALT MANAGER FEATURE ADDED!
+# IF YOU ARE ON MOBILE, PLEASE ZOOM OUT TO 50%!
 # NEW ACCOUNT GENERATOR FEATURE ADDED!
 
 [![Website](https://img.shields.io/badge/Website-X--GUI-1f6feb?style=for-the-badge&logo=google-chrome&logoColor=white)](https://xgui-client.github.io)
