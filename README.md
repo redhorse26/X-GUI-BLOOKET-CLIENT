@@ -1,6 +1,6 @@
 # 🚀 X-GUI Blooket Client
 # IF YOU ARE ON MOBILE, PLEASE ZOOM OUT TO 50%!
-# NEW ACCOUNT GENERATOR FEATURE ADDED!
+# FIXED MOST CHEATS!
 
 [![Website](https://img.shields.io/badge/Website-X--GUI-1f6feb?style=for-the-badge&logo=google-chrome&logoColor=white)](https://xgui-client.github.io)
 [![GitHub stars](https://img.shields.io/github/stars/xull-xxx/X-GUI-BLOOKET-CLIENT?style=for-the-badge&logo=github)](https://github.com/xull-xxx/X-GUI-BLOOKET-CLIENT/stargazers)
