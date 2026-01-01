@@ -2166,9 +2166,11 @@ run: function () {
         url,
         "_blank",
         "width=500,height=500,resizable=yes,scrollbars=yes,status=yes"
-    );
+   );
+})();
 }
 }, {
+
                name: "Crash Game",
             description: "Crashes the host's game",
             run: function() {
