@@ -9540,38 +9540,33 @@ pingDisplay.id = "xguiPingDisplay";
 pingDisplay.style.cssText = `
     margin-top: 40px;
     text-align: center;
-    font-size: 1.4em; /* bigger text */
+    font-size: 1.4em;
     font-weight: 700;
     color: var(--highlight);
     font-family: Nunito, sans-serif;
     width: 100%;
 `;
 
-// Initial text
 pingDisplay.innerText = "Server Ping: Calculating...";
-
-// Assuming `creditsPage` is already defined, append to it
 creditsPage.appendChild(pingDisplay);
 
-// Function to ping a server
 function updatePing() {
-    const serverURL = "https://www.blooket.com"; // Correct URL to avoid the 301 redirect
     const start = performance.now();
+    const img = new Image();
 
-    fetch(serverURL, { method: "HEAD", cache: "no-cache" })
-        .then(() => {
-            const latency = Math.round(performance.now() - start);
-            pingDisplay.innerText = `Server Ping: ${latency} ms`;
-        })
-        .catch(() => {
-            pingDisplay.innerText = "Server Ping: Offline";
-        });
+    img.onload = () => {
+        const latency = Math.round(performance.now() - start);
+        pingDisplay.innerText = `Server Ping: ${latency} ms`;
+    };
+
+    img.onerror = () => {
+        pingDisplay.innerText = "Server Ping: Offline";
+    };
+
+    img.src = "https://ac.blooket.com/dashclassic/favicon.ico?cb=" + Date.now();
 }
 
-// Initial ping
 updatePing();
-
-// Update every 5 seconds
 setInterval(updatePing, 5000);
 
 
