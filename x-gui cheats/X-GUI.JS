@@ -4,7 +4,7 @@
  /**
  * @license AGPL-3.0
  * Blooket Cheats
- * Copyright (C) 2023-present Xullys/redhorse26
+ * Copyright (C) 2023-present 05Konz/Xullys/redhorse26
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published
  * by the Free Software Foundation, either version 3 of the License, or
@@ -2137,92 +2137,36 @@ run: function () {
 description: "Opens X-GUI Ingame Chat",
 run: function () {
 
-    // Prevent duplicates
-    if (document.getElementById("xgui-gameid-modal")) return;
-
-    // Overlay
-    const overlay = document.createElement("div");
-    overlay.id = "xgui-gameid-modal";
-    Object.assign(overlay.style, {
-        position: "fixed",
-        inset: "0",
-        background: "rgba(0,0,0,0.6)",
-        backdropFilter: "blur(6px)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: "999999"
-    });
-
-    // Modal
-    const modal = document.createElement("div");
-    Object.assign(modal.style, {
-        width: "320px",
-        padding: "20px",
-        borderRadius: "14px",
-        background: "linear-gradient(135deg,#0f1220,#141833)",
-        boxShadow: "0 20px 40px rgba(0,0,0,0.5)",
-        fontFamily: "system-ui, sans-serif",
-        color: "#fff",
-        display: "flex",
-        flexDirection: "column",
-        gap: "14px"
-    });
-
-    modal.innerHTML = `
-        <div style="font-size:16px;font-weight:600;">Enter Game ID</div>
-        <input id="xgui-gameid-input" placeholder="Game ID"
-            style="
-                padding:10px 12px;
-                border-radius:10px;
-                border:none;
-                outline:none;
-                background:#0b0e1a;
-                color:white;
-                font-size:14px;
-            ">
-        <button id="xgui-gameid-submit"
-            style="
-                padding:10px;
-                border-radius:10px;
-                border:none;
-                cursor:pointer;
-                font-weight:600;
-                background:linear-gradient(135deg,#6c7cff,#8a5cff);
-                color:white;
-            ">
-            Open Chat
-        </button>
-    `;
-
-    overlay.appendChild(modal);
-    document.body.appendChild(overlay);
-
-    const input = modal.querySelector("#xgui-gameid-input");
-    const button = modal.querySelector("#xgui-gameid-submit");
-
-    input.focus();
-
-    function submit() {
-        const gameId = input.value.trim();
-        if (!gameId) return;
-
-        window.open(
-            `https://hack.chat/?xgui(${gameId})`,
-            "_blank",
-            "width=500,height=500,resizable=yes,scrollbars=yes,status=yes"
-        );
-
-        overlay.remove();
+(function () {
+    function getGameCode() {
+        const appDiv = document.querySelector('#app>div>div');
+        if (appDiv) {
+            const reactComponent = Object.values(appDiv)[1]?.children[0]?._owner;
+            return reactComponent?.stateNode?.props?.client?.hostId || null;
+        }
+        return null;
     }
 
-    button.onclick = submit;
-    input.addEventListener("keydown", e => e.key === "Enter" && submit());
+    function getGameCodeFromURL() {
+        const parts = window.location.pathname.split('/').filter(Boolean);
+        return parts.length >= 3 ? parts[0] : null;
+    }
 
-    // Click outside to close
-    overlay.addEventListener("click", e => {
-        if (e.target === overlay) overlay.remove();
-    });
+    let gameCode = getGameCode();
+
+    if (!gameCode) {
+        gameCode = getGameCodeFromURL();
+    }
+
+    const url = gameCode
+        ? "https://hack.chat/?xgui" + gameCode
+        : "https://hack.chat/?xgui";
+
+    window.open(
+        url,
+        "_blank",
+        "width=500,height=500,resizable=yes,scrollbars=yes,status=yes"
+    );
 }
 }, {
                name: "Crash Game",
