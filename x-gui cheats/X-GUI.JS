@@ -1,6 +1,3 @@
-
-
-
  /**
  * @license AGPL-3.0
  * Blooket Cheats
@@ -47,7 +44,7 @@ console.log("%c Star the GitHub repo! %c https://github.com/xgui-client/X-GUI-BL
     const timeProcessed = 1747005941679;
     let latestProcess = -1;
     const cheat = (async () => {
-        const versionName = "6.64x";
+        const versionName = "6.65x";
         const gui = document.createElement("div");
         Object.assign(gui.style, {
             top: window.innerHeight / 2 - 250 + "px",
@@ -7002,7 +6999,7 @@ name: "Set Next Fish",
             })
         }, {
 
-            
+
                         name: "Stock Food",
                         description: "Stocks all food to 99 (Not usable in the shop)",
                         run: function () {
@@ -8816,6 +8813,7 @@ changelogPage.appendChild(title);
 
 // Versions array (30 versions, highest to lowest)
 const versions = [
+  ["Version 6.65x", "ADDED CLIENT SIDED BLOOK EDITOR", "null"],
   ["Version 6.64x", "FIXED MOST GAMEMODES", "null"],
   ["Version 6.63x", "ADDED BLOOK EDITOR AND UPDATED MOBILE MODE", "null"],
   ["Version 6.62x", "ADDED ACCOUNT GENERATOR", "null"],
@@ -9381,6 +9379,276 @@ setBtn.onclick = () => {
   });
 };
 //Written by Lil Skittle
+
+        // ================= CLIENT PAGE =================
+const clientPage = document.createElement("div");
+clientPage.className = classes.favoritesPage || "favoritesPage";
+
+Object.assign(clientPage.style, {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "30px",
+  padding: "40px 20px",
+  overflowY: "auto"
+});
+
+// ===== STYLE =====
+const clientStyle = document.createElement("style");
+clientStyle.textContent = `
+.clientCard {
+  background: var(--background2);
+  border-radius: 22px;
+  padding: 36px 34px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.clientLaunchBtn {
+  padding: 18px 46px;
+  border-radius: 18px;
+  font-size: 1.15em;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg,#8f6bff,#5b4bdb);
+  box-shadow: 0 10px 30px rgba(120,100,255,.45);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.clientLaunchBtn:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.12);
+  box-shadow: 0 18px 45px rgba(120,100,255,.6);
+}
+
+.clientLaunchBtn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(120,100,255,.4);
+}
+`;
+document.head.appendChild(clientStyle);
+
+// ===== TITLE =====
+const clienttitle = document.createElement("div");
+clienttitle.innerHTML = `
+  <div style="
+    font-size:2.4em;
+    font-weight:900;
+    text-align:center;
+    color:#fff;
+    text-shadow:0 0 14px var(--highlight),0 0 28px var(--highlight2);
+  ">🧩 Client Sided Blook Menu</div>
+  <div style="opacity:.65;font-weight:600;text-align:center;margin-top:6px">
+    Customize your Blook to your style!
+  </div>
+`;
+
+// ===== CARD =====
+const card = document.createElement("div");
+card.className = "clientCard";
+
+// ===== LAUNCH BUTTON =====
+const launchBtn = document.createElement("button");
+launchBtn.className = "clientLaunchBtn";
+launchBtn.textContent = "Open Blook Customizer";
+
+launchBtn.onclick = () => {
+  if (document.getElementById("xgui-blook-customizer")) return;
+
+  // ===== DRAGGABLE CUSTOMIZER GUI =====
+  const gui = document.createElement("div");
+  gui.id = "xgui-blook-customizer";
+
+  Object.assign(gui.style, {
+    position: "fixed",
+    top: "120px",
+    left: "120px",
+    zIndex: "99999",
+    width: "250px",
+    padding: "12px",
+    background: "linear-gradient(180deg,#140f1f,#0b0812)",
+    color: "#eee",
+    borderRadius: "14px",
+    border: "1px solid #2a1f3d",
+    fontFamily: "Inter, system-ui, sans-serif",
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+    boxShadow: "0 12px 40px rgba(120,80,255,.25)",
+    userSelect: "none"
+  });
+
+  // ===== HEADER =====
+  const header = document.createElement("div");
+  Object.assign(header.style, {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    height: "28px",
+    padding: "0 4px",
+    fontWeight: "700",
+    fontSize: "13px",
+    color: "#cdbbff",
+    cursor: "grab"
+  });
+  header.textContent = "Blook Customizer";
+
+  const close = document.createElement("button");
+  close.textContent = "✕";
+  Object.assign(close.style, {
+    background: "none",
+    border: "none",
+    color: "#7f6ab8",
+    fontSize: "16px",
+    cursor: "pointer"
+  });
+  close.onclick = () => gui.remove();
+
+  header.appendChild(close);
+  gui.appendChild(header);
+
+  // ===== DRAG =====
+  let drag = false, dx = 0, dy = 0;
+  header.onmousedown = e => {
+    drag = true;
+    dx = e.clientX - gui.offsetLeft;
+    dy = e.clientY - gui.offsetTop;
+    header.style.cursor = "grabbing";
+  };
+  document.onmousemove = e => {
+    if (!drag) return;
+    gui.style.left = e.clientX - dx + "px";
+    gui.style.top = e.clientY - dy + "px";
+  };
+  document.onmouseup = () => {
+    drag = false;
+    header.style.cursor = "grab";
+  };
+
+  // ===== STACK =====
+  const stack = () => {
+    const d = document.createElement("div");
+    Object.assign(d.style, {
+      display: "flex",
+      flexDirection: "column",
+      gap: "6px"
+    });
+    return d;
+  };
+
+  // ===== INPUT =====
+  const input = ph => {
+    const i = document.createElement("input");
+    i.placeholder = ph;
+    Object.assign(i.style, {
+      width: "100%",
+      height: "36px",
+      padding: "0 12px",
+      background: "#0f0b18",
+      color: "#eee",
+      border: "1px solid #2e2450",
+      borderRadius: "10px",
+      fontSize: "12.5px",
+      boxSizing: "border-box",
+      outline: "none"
+    });
+    i.onfocus = () => i.style.borderColor = "#8b5cf6";
+    i.onblur  = () => i.style.borderColor = "#2e2450";
+    return i;
+  };
+
+  // ===== BUTTON =====
+  const btn = (t, bg) => {
+    const b = document.createElement("button");
+    b.textContent = t;
+    Object.assign(b.style, {
+      height: "38px",
+      borderRadius: "10px",
+      border: "none",
+      cursor: "pointer",
+      fontWeight: "700",
+      color: "#fff",
+      background: bg
+    });
+    b.onmouseenter = () => b.style.filter = "brightness(1.12)";
+    b.onmouseleave = () => b.style.filter = "none";
+    return b;
+  };
+
+  const custom = stack();
+  const imgIn = input("Blook Image URL");
+  const bgIn = input("Background URL");
+  const nameIn = input("Blook Name");
+  const rareIn = input("Rarity Name");
+  const colIn = input("Rarity Color");
+  custom.append(imgIn, bgIn, nameIn, rareIn, colIn);
+
+  const apply = btn("Apply Custom", "linear-gradient(135deg,#7c3aed,#5b21b6)");
+
+  const seedStack = stack();
+  const seedIn = input("Seed");
+  const load = btn("Load Seed", "linear-gradient(135deg,#22c55e,#16a34a)");
+  const get = btn("Get Seed", "#1a1626");
+  seedStack.append(seedIn, load, get);
+
+  gui.append(custom, apply, seedStack);
+  document.body.appendChild(gui);
+
+  // ===== LOGIC (UNCHANGED) =====
+  const updateBlook = (img, bg, name, rare, col) => {
+    const b = document.querySelector('img[class*="blook"]');
+    const g = document.querySelector('img[class*="_rightBackground"]');
+    const n = document.querySelector('div[style*="white-space: nowrap"]');
+    const r = document.querySelector('div[class*="Rarity"]');
+
+    if (b && img) b.src = img;
+    if (g && bg) g.src = bg;
+    if (r) {
+      if (rare) r.textContent = rare;
+      if (col) r.style.color = col;
+    }
+    if (n && name) {
+      n.textContent = name;
+      let s = 39;
+      n.style.fontSize = s + "px";
+      while (n.scrollWidth > n.parentElement.clientWidth && s > 1) {
+        n.style.fontSize = --s + "px";
+      }
+    }
+  };
+
+  apply.onclick = () =>
+    updateBlook(imgIn.value, bgIn.value, nameIn.value, rareIn.value, colIn.value);
+
+  get.onclick = () => {
+    const b = document.querySelector('img[class*="blook"]');
+    const g = document.querySelector('img[class*="_rightBackground"]');
+    const n = document.querySelector('div[style*="white-space: nowrap"]');
+    const r = document.querySelector('div[class*="Rarity"]');
+    seedIn.value = btoa(unescape(encodeURIComponent(JSON.stringify({
+      img: b?.src, bg: g?.src, name: n?.textContent,
+      rare: r?.textContent, col: r?.style.color
+    }))));
+  };
+
+  load.onclick = () => {
+    try {
+      const d = JSON.parse(decodeURIComponent(escape(atob(seedIn.value))));
+      updateBlook(d.img, d.bg, d.name, d.rare, d.col);
+    } catch { alert("Invalid Seed"); }
+  };
+};
+
+// ===== BUILD =====
+card.append(launchBtn);
+clientPage.append(clienttitle, card);
+
 
 
 
@@ -10261,6 +10529,24 @@ function createSidebarPath(name, iconKey, page) {
 
 </svg>
 `,
+      client: `
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     width="1em" height="1em"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="1.8"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+  <!-- wrench head -->
+  <path d="M14.5 3a4.5 4.5 0 00-3.8 6.8l-7.3 7.3a2 2 0 102.8 2.8l7.3-7.3A4.5 4.5 0 0019.5 7l-3 3-4-4 3-3z"/>
+
+</svg>
+`,
+
+
+
       editor: `
 <svg xmlns="http://www.w3.org/2000/svg"
      viewBox="0 0 24 24"
@@ -10410,6 +10696,7 @@ createSidebarPath("Logs", "terminal", logsPage);
 createSidebarPath("Settings", "cog", settingsPage);
 createSidebarPath("Alt Manager", "alt", altPage);
 createSidebarPath("Blook Editor", "editor", blookPage);
+createSidebarPath("Client Blooks", "client", clientPage);
 createSidebarPath("Changelog", "changelog", changelogPage);
 createSidebarPath("Info/Credits", "code", creditsPage);
 
