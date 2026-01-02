@@ -2298,8 +2298,8 @@ button,
                             })
                         }
                     },{
-                        name: "Crash Game (all modes except Gold Quest, Crypto and Frenzy)",
-                        description: "Crashes the host's game. Works only on Enter Nickname menu or if you have the extension.",
+                        name: "Universal Game Crasher",
+                        description: "Crashes the host's game. Works only on Enter Nickname menu or if you have the extension. And if your in Gold Quest, Crypto, Frenzy then it will crash when the game starts.",
                         run: async function() {
         'use strict';
         const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
