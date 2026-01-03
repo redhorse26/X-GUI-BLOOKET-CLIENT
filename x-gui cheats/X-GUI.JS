@@ -10419,7 +10419,7 @@ button,
                     `;
 
                     const discordButton = document.createElement("a");
-                    discordButton.href = "https://discord.gg/m7BejpKAFG"; 
+                    discordButton.href = "https://discord.gg/nyaRdE4CeT"; 
                     discordButton.target = "_blank";
                     discordButton.innerHTML = `
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
