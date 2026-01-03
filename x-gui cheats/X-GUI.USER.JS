@@ -12,6 +12,7 @@
 // @downloadURL https://raw.githubusercontent.com/xgui-client/X-GUI-BLOOKET-CLIENT/refs/heads/main/x-gui%20cheats/X-GUI.JS
 // @updateURL   https://raw.githubusercontent.com/xgui-client/X-GUI-BLOOKET-CLIENT/refs/heads/main/x-gui%20cheats/X-GUI.JS
 // @grant       none
+// @require     https://cdn.jsdelivr.net/npm/sweetalert2@11
 // ==/UserScript==
 
 (function() {
