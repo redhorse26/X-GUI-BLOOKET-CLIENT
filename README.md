@@ -1,7 +1,5 @@
 # 🚀 X-GUI Blooket Client
-# SWAL ADDED, MADE BY LANDSEDGE!
-# CLIENT SIDED BLOOK CHANGER
-# REDHORSE26 FIXED MOST CHEATS!
+# MOST CHEATS FIXED BY @REDHORSE26, SWEET ALERTS TOGGLE ADDED!
 
 
 [![Website](https://img.shields.io/badge/Website-X--GUI-1f6feb?style=for-the-badge&logo=google-chrome&logoColor=white)](https://xgui-client.github.io)
