@@ -1,5 +1,6 @@
 # 🚀 X-GUI Blooket Client
-# MOST CHEATS FIXED BY @REDHORSE26, SWEET ALERTS TOGGLE ADDED!
+# ADDED CHEAT CREATOR & NEW SLEEK ANIMATIONS!
+# MADE BY LANDSEDGE
 
 
 [![Website](https://img.shields.io/badge/Website-X--GUI-1f6feb?style=for-the-badge&logo=google-chrome&logoColor=white)](https://xgui-client.github.io)
