@@ -10612,7 +10612,7 @@ button,
                     `;
 
                     const discordButton = document.createElement("a");
-                    discordButton.href = "https://discord.gg/A7CRUz8vFR";
+                    discordButton.href = "https://discord.gg/rQvZ9UB3";
                     discordButton.target = "_blank";
                     discordButton.innerHTML = `
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -12428,7 +12428,7 @@ modulePage.append(modTitle, buttonGrid, clearAllContainer);
 
         creditLinks.append(createCredit("Our Github", '<a target="_blank" href="https://github.com/XULL-XXX/X-GUI-BLOOKET-CLIENT">X-GUI CHEATS/GITHUB</a>'));
         creditLinks.append(createCredit("Our Website", '<a target="_blank" href="https://xgui-client.github.io">More Info/Website</a>'));
-        creditLinks.append(createCredit("Discord", '<a target="_blank" href="https://discord.gg/A7CRUz8vFR">JOIN THE SERVER</a>'));
+        creditLinks.append(createCredit("Discord", '<a target="_blank" href="https://discord.gg/rQvZ9UB3">JOIN THE SERVER</a>'));
 
         function parseTime(d) {
             const hour = d.getHours() % 12 == 0 ? 12 : d.getHours() % 12;
