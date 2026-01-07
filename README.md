@@ -2,7 +2,7 @@
 # ADDED CHEAT CREATOR & NEW SLEEK ANIMATIONS!
 # MADE BY LANDSEDGE
 
-[![HitCount](https://hits.dwyl.com/xgui-client/X-GUI-BLOOKET-CLIENT.svg)](https://hits.dwyl.com/xgui-client/X-GUI-BLOOKET-CLIENT)
+[![HitCount](https://hits.dwyl.com/xgui-client/X-GUI-BLOOKET-CLIENT.svg?style=flat&show=unique)](https://hits.dwyl.com/xgui-client/X-GUI-BLOOKET-CLIENT)
 [![Website](https://img.shields.io/badge/Website-X--GUI-1f6feb?style=for-the-badge&logo=google-chrome&logoColor=white)](https://xgui-client.github.io)
 [![GitHub stars](https://img.shields.io/github/stars/xull-xxx/X-GUI-BLOOKET-CLIENT?style=for-the-badge&logo=github)](https://github.com/xull-xxx/X-GUI-BLOOKET-CLIENT/stargazers)
 [![License](https://img.shields.io/badge/License-AGPL--3.0-2ea043?style=for-the-badge&logo=gnu&logoColor=white)]()
