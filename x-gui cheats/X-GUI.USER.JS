@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         X-GUI CLIENT FOR BLOOKET
 // @namespace    http://tampermonkey.net/
-// @version      6.68x
+// @version      6.69x
 // @description  NOT PATCHED ANYMORE, THE BEST GUI ON THE WEB! ADVANCED ANTIBAN AND TONS OF FEATURES {CHEAT} {HACK} {CLIENT}
 // @author       XullysFN
 // @run-at       document-end
@@ -16,6 +16,7 @@
 // @grant       GM_addStyle
 // @require     https://cdn.jsdelivr.net/npm/sweetalert2@11
 // ==/UserScript==
+
 
 
 
@@ -79,7 +80,7 @@ console.log("%c Star the GitHub repo! %c https://github.com/xgui-client/X-GUI-BL
     const timeProcessed = 1747005941679;
     let latestProcess = -1;
     const cheat = (async () => {
-        const versionName = "6.68x";
+        const versionName = "6.69x";
         const gui = document.createElement("div");
         Object.assign(gui.style, {
             top: window.innerHeight / 2 - 250 + "px",
@@ -3698,14 +3699,15 @@ name: "Free Plus!",
                 ],
             },
 
-        custom_modules: {
-            img: "https://ac.blooket.com/marketassets/blooks/astronaut.svg",
-            name: "Custom Modules",
-            cheats: (() => {
-        // Return empty array if CSP is detected (it prevents modules from loading which causes the menu to break)
-        if (detectCSP()) {
-            return [];
-        }
+custom_modules: {
+    img: (() => {
+        const img = new Image();
+        img.src = "data:image/png;base64,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";
+        return img.src;
+    })(),
+    name: "Custom Modules",
+    cheats: (() => {
+        if (detectCSP()) return [];
 
         const customModules = CookieHelper.getCookie('custom_modules_list') || [];
         return customModules.map((module, index) => {
@@ -3739,7 +3741,8 @@ name: "Free Plus!",
             }
         });
     })()
-},
+}, // enhanced by skittle
+
 
             gold: {
                 img: new Date().getMonth() == 9 ? "https://media.blooket.com/image/upload/v1663212881/Media/logos/Candy_Quest_Logo.png" : "https://media.blooket.com/image/upload/v1663212881/Media/logos/Gold_Quest_Logo_Resized.png",
@@ -10969,6 +10972,7 @@ name: "Free Plus!",
 
         // Versions array (30 versions, highest to lowest)
         const versions = [
+            ["Version 6.69x", "ADDED CSP DETECTOR FOR CUSTOM MODULES, FIXED CUSTOM MODULES BUG, FIXED, FIXED STORAGE ISSUE.", "null"],
             ["Version 6.68x", "ADDED SMOOTH ANIMATIONS FOR X-GUI, ADDED CUSTOM MODULES, AND NOW YOU CAN DRAG THE TOP AREA.", "null"],
             ["Version 6.67x", "ADDED SWAL ALERTS! TOGGLE, ADDED UNSUPPORTED GAMEMODE WARNINGS, AND MOVED SETTINGS MENU.", "null"],
             ["Version 6.66x", "ADDED SWAL ALERTS!", "null"],
