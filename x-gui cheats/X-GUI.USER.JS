@@ -10966,7 +10966,7 @@ custom_modules: {
 
         // Versions array (30 versions, highest to lowest)
         const versions = [
-            ["Version 6.69x", "ADDED CSP DETECTOR FOR CUSTOM MODULES, FIXED CUSTOM MODULES BUG, FIXED, FIXED STORAGE ISSUE.", "null"],
+            ["Version 6.69x", "ADDED CSP DETECTOR FOR CUSTOM MODULES, FIXED CUSTOM MODULES BUG, FIXED STORAGE ISSUE ADDED IMAGE FIX AND ADDED FREE PLUS!.", "null"],
             ["Version 6.68x", "ADDED SMOOTH ANIMATIONS FOR X-GUI, ADDED CUSTOM MODULES, AND NOW YOU CAN DRAG THE TOP AREA.", "null"],
             ["Version 6.67x", "ADDED SWAL ALERTS! TOGGLE, ADDED UNSUPPORTED GAMEMODE WARNINGS, AND MOVED SETTINGS MENU.", "null"],
             ["Version 6.66x", "ADDED SWAL ALERTS!", "null"],
